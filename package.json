@@ -17,6 +17,7 @@
     "sass-loader": "^6.0.7",
     "style-loader": "0.20.3",
     "ts-loader": "^4.1.0",
+    "tslint": "^5.10.0",
     "typescript": "^2.8.1",
     "webpack": "^4.3.0",
     "webpack-cli": "^2.0.13",
@@ -24,7 +25,8 @@
   },
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "lint": "tslint src/**/*.ts src/**/*.tsx"
   },
   "dependencies": {
     "@arcgis/webpack-plugin": "^4.7.1",
