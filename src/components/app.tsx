@@ -14,18 +14,18 @@ export default class App extends React.Component<any, State> {
 
     const queryString = window.location.search.slice(1);
     if (queryString) {
-      const searchKeyValue = queryString.split('=');
+      const searchKeyValue = queryString.split("=");
       if (searchKeyValue[0] === "scene") {
         const scene = searchKeyValue[1];
         this.state = {
           currentScene: scene
-        }
+        };
       }
     }
     else {
       this.state = {
         currentScene: null
-      }
+      };
     }
   }
 
@@ -34,11 +34,11 @@ export default class App extends React.Component<any, State> {
       currentScene: type
     });
     if (history.pushState) {
-      let newurl = `${window.location.protocol}//${window.location.host + window.location.pathname}`
+      let newurl = `${window.location.protocol}//${window.location.host + window.location.pathname}`;
       if (type) {
         newurl += `?scene=${type}`;
       }
-      window.history.pushState({ path : newurl }, '', newurl);
+      window.history.pushState({ path : newurl }, "", newurl);
     }
 
   }

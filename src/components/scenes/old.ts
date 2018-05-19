@@ -20,7 +20,7 @@ const buildingsLayer = new SceneLayer({
         new FillSymbol3DLayer({
           edges: new SolidEdges3D({
             color: [0, 0, 0, 0.7],
-            size: 2,
+            size: 2
           })
         })
       ]

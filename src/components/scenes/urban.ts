@@ -88,7 +88,7 @@ const oldAreaLayer = new FeatureLayer({
   renderer: new SimpleRenderer({
     symbol: new PolygonSymbol3D({
       symbolLayers: [new FillSymbol3DLayer({
-        material:{
+        material: {
           color: "#ffcc00"
         }
       })]

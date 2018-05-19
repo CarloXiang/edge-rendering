@@ -12,7 +12,7 @@ import oldScene from "./scenes/old";
 import * as React from "react";
 
 interface WebsceneProps {
-  webscene: string | null
+  webscene: string | null;
 }
 
 export default class WebSceneView extends React.Component<WebsceneProps> {
@@ -30,7 +30,7 @@ export default class WebSceneView extends React.Component<WebsceneProps> {
       environment: {
         lighting: {
           directShadowsEnabled: true,
-          ambientOcclusionEnabled: true,
+          ambientOcclusionEnabled: true
         }
       },
       constraints: {
@@ -51,7 +51,7 @@ export default class WebSceneView extends React.Component<WebsceneProps> {
     switch (this.props.webscene) {
       case "urban":
         this.view.map = urbanScene;
-        watchUtils.whenTrueOnce(this.view, 'ready', () => {
+        watchUtils.whenTrueOnce(this.view, "ready", () => {
           this.view.camera = new Camera({
             tilt: 45,
             heading: 319,
@@ -67,7 +67,7 @@ export default class WebSceneView extends React.Component<WebsceneProps> {
       break;
       case "touristic":
         this.view.map = touristicScene;
-        watchUtils.whenTrueOnce(this.view, 'ready', () => {
+        watchUtils.whenTrueOnce(this.view, "ready", () => {
           this.view.camera = new Camera({
             tilt: 72,
             heading: 293,
@@ -82,7 +82,7 @@ export default class WebSceneView extends React.Component<WebsceneProps> {
       break;
       case "night":
         this.view.map = nightScene;
-        watchUtils.whenTrueOnce(this.view, 'ready', () => {
+        watchUtils.whenTrueOnce(this.view, "ready", () => {
           this.view.camera = new Camera({
             position: {
               spatialReference: SpatialReference.WebMercator,

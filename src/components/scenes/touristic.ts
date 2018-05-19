@@ -10,7 +10,7 @@ import SimpleRenderer = require("esri/renderers/SimpleRenderer");
 import MeshSymbol3D = require("esri/symbols/MeshSymbol3D");
 import FillSymbol3DLayer = require("esri/symbols/FillSymbol3DLayer");
 import SketchEdges3D = require("esri/symbols/edges/SketchEdges3D");
-import * as parisStyle from '../../basemap-styles/paris.json';
+import * as parisStyle from "../../basemap-styles/paris.json";
 
 
 // original style from http://www.arcgis.com/home/item.html?id=0d5695666b4c46d6abb5715fc0572d6b

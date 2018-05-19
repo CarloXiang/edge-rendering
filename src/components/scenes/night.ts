@@ -11,7 +11,7 @@ import MeshSymbol3D = require("esri/symbols/MeshSymbol3D");
 import FillSymbol3DLayer = require("esri/symbols/FillSymbol3DLayer");
 import SolidEdges3D = require("esri/symbols/edges/SolidEdges3D");
 
-import * as novaStyle from '../../basemap-styles/nova.json';
+import * as novaStyle from "../../basemap-styles/nova.json";
 
 const novaBaseLayer = new VectorTileLayer({
   url: "https://basemaps.arcgis.com/b2/arcgis/rest/services/World_Basemap/VectorTileServer"
