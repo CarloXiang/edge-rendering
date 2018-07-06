@@ -1,4 +1,3 @@
-
 import WebScene = require("esri/WebScene");
 
 import SceneLayer = require("esri/layers/SceneLayer");

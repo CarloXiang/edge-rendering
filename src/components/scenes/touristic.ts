@@ -33,21 +33,21 @@ const buildingsLayer = new SceneLayer({
     offset: 10
   },
   renderer: new SimpleRenderer({
-    symbol: new MeshSymbol3D({
-      symbolLayers: [
-        new FillSymbol3DLayer({
-          material: {
-            color: "#ffffff",
-            colorMixMode: "replace"
-          },
-          edges: new SketchEdges3D({
-            color: [121, 69, 211, 1],
-            size: 2,
-            extensionLength: 3
-          })
-        })
-      ]
+symbol: new MeshSymbol3D({
+  symbolLayers: [
+    new FillSymbol3DLayer({
+      material: {
+        color: "#ffffff",
+        colorMixMode: "replace"
+      },
+      edges: new SketchEdges3D({
+        color: [121, 69, 211, 1],
+        size: 3,
+        extensionLength: 6
+      })
     })
+  ]
+})
   })
 });
 

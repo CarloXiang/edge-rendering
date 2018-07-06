@@ -3,8 +3,6 @@ import WebScene = require("esri/WebScene");
 
 import SceneLayer = require("esri/layers/SceneLayer");
 import FeatureLayer = require("esri/layers/FeatureLayer");
-import VectorTileLayer = require("esri/layers/VectorTileLayer");
-
 import SimpleRenderer = require("esri/renderers/SimpleRenderer");
 import PolygonSymbol3D = require("esri/symbols/PolygonSymbol3D");
 
@@ -12,8 +10,6 @@ import ClassBreaksRenderer = require("esri/renderers/ClassBreaksRenderer");
 import MeshSymbol3D = require("esri/symbols/MeshSymbol3D");
 import FillSymbol3DLayer = require("esri/symbols/FillSymbol3DLayer");
 import SolidEdges3D = require("esri/symbols/edges/SolidEdges3D");
-
-import * as white from "../../basemap-styles/white.json";
 
 const webscene = new WebScene({
   portalItem: {
@@ -60,24 +56,6 @@ const buildingsLayer = new SceneLayer({
             })
           ]
         })
-      },
-      {
-        minValue: 1876,
-        maxValue: 2050,
-        symbol: new MeshSymbol3D({
-          symbolLayers: [
-            new FillSymbol3DLayer({
-              material: {
-                color: "#ffffff",
-                colorMixMode: "replace"
-              },
-              edges: new SolidEdges3D({
-                color: [0, 0, 0, 1],
-                size: 1
-              })
-            })
-          ]
-        })
       }
     ]
   })
@@ -94,21 +72,12 @@ const oldAreaLayer = new FeatureLayer({
       })]
     })
   }),
+  elevationInfo: {
+    mode: "on-the-ground"
+  },
   opacity: 0.5
 });
 
-/* var basemap = new VectorTileLayer({
-   portalItem: {
-    id: "dfb04de5f3144a80bc3f9f336228d24a"
-  }
-}); */
-
-const basemap =  new VectorTileLayer({
-  url: "https://basemaps.arcgis.com/b2/arcgis/rest/services/World_Basemap/VectorTileServer"
-});
-
-basemap.loadStyle(white);
-
-webscene.addMany([basemap, oldAreaLayer, buildingsLayer]);
+webscene.addMany([oldAreaLayer, buildingsLayer]);
 
 export default webscene;
